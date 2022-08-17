@@ -32,7 +32,12 @@ CREATE TABLE `uutiset` (
   `Otsikko` varchar(300) NOT NULL,
   `Julkaisuaika` date NOT NULL,
   `Leipateksti` text(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;''
+
+INSERT INTO `uutiset` (`Id`, `Otsikko`, `Julkaisuaika`, `Leipateksti`) VALUES
+(1, '', '', '', ''),
+(2, '', '', '', ''),
+(3, '', '', '', '');
 
 --
 -- Indexes for dumped tables
