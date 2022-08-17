@@ -35,9 +35,9 @@ CREATE TABLE `uutiset` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;''
 
 INSERT INTO `uutiset` (`Id`, `Otsikko`, `Julkaisuaika`, `Leipateksti`) VALUES
-(1, '', '', '', ''),
-(2, '', '', '', ''),
-(3, '', '', '', '');
+(1, 'Turun ammatti-instituutin Padel jaoston toiminta jatkuu tänäkin syksynä!', '17.8.2022', ''),
+(2, 'Turun ammatti-instituutin Padel jaoston toiminta alkanut hyvin!', '20.4.2022', ''),
+(3, 'Turun ammatti-instituutin Padel jaosto aloittaa toimintansa!', '24.1.2022', '');
 
 --
 -- Indexes for dumped tables
