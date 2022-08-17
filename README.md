@@ -1,2 +1,3 @@
 # Sivujen jako 
-Jimi tekee: Uutiset ja ilmoittautuminen sivut. Kaius tekee: Etusivun ja sivujen testauksen.
+Jimi: Uutiset ja ilmoittautuminen sivut. 
+Kaius: Etusivun ja sivujen testauksen.
