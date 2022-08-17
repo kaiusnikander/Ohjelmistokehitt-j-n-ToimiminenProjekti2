@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `uutiset` (
   `Id` int(1) NOT NULL,
   `Otsikko` varchar(300) NOT NULL,
-  `Julkaisuaika` text NOT NULL,
-  `Leipateksti` date NOT NULL
+  `Julkaisuaika` date NOT NULL,
+  `Leipateksti` text(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
