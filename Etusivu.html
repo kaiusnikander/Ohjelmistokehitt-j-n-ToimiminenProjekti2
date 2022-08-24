@@ -84,7 +84,7 @@ body, html {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("padelheroimage.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("padelseura.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -115,6 +115,64 @@ body, html {
 .hero-text button:hover {
   background-color: #555;
   color: white;
+}
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
 }
 </style>
 </head>
@@ -154,19 +212,19 @@ body, html {
   </div>
   
   <div class="w3-bar w3-black">
-    <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Peruskurssi')">Peruskurssi</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Harrastejaosto')">Harrastejaosto</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Kilpajaosto')">Kilpajaosto</button>
   </div>
   
-  <div id="London" class="w3-container w3-display-container city">
+  <div id="Peruskurssi" class="w3-container w3-display-container city">
     <span onclick="this.parentElement.style.display='none'"
     class="w3-button w3-large w3-display-topright">&times;</span>
     <h2>Peruskurssi</h2>
     <p>London is the capital city of England.</p>
   </div>
   
-  <div id="Paris" class="w3-container w3-display-container city" style="display:none">
+  <div id="Harrastejaosto" class="w3-container w3-display-container city" style="display:none">
     <span onclick="this.parentElement.style.display='none'"
     class="w3-button w3-large w3-display-topright">&times;</span>
     <h2>Harrastejaosto</h2>
@@ -191,6 +249,53 @@ body, html {
   }
   </script>
   
+
+
+
+  <h2>Responsive "Meet The Team" Section</h2>
+  <br>
   
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="pekka.jpg" alt="Pekka" style="width:100%">
+        <div class="container">
+          <h2>Pekka Martti</h2>
+          <p class="title">Peruskurssin opettaja</p>
+          <p>Pekka opettaa teidät padelin alkuun ja tutustuttaa teidät sen pelaamiseen.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+        <div class="container">
+          <h2>Miles Rossi</h2>
+          <p class="title">Art Director</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+        <div class="container">
+          <h2>John Doe</h2>
+          <p class="title">Designer</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<br>  
+<br> 
+<br> 
 </body>
 </html>
