@@ -1,24 +1,8 @@
 <?php 
 @ini_set("display_errors", 1);
 @ini_set("error_reporting", E_ALL);
-// Otetaan yhteys tietokantapalvelimeen
-include("yhteys.php");  // Sisällyttää aiemmin tehdyn yhteys.php-tiedoston tähän
-// Taulun nimi on jasenet, ei esim Jäsenet tai Jasenet
-// Listataan kaikki = *
-$sql_lause =  "SELECT * FROM uutiset";
-try {
-  $kysely = $yhteys->prepare($sql_lause);
-  $kysely->execute();
-} 
- catch (PDOException $e) {
-            die("VIRHE: " . $e->getMessage());
-       }
-$tulos = $kysely->fetchAll();
-foreach($tulos as $rivi) {     
- // Taulussa on oltava sarakenimet Sukunimi, Etunimi jne
- echo $rivi['Otsikko'] . ", " . $rivi['Julkaisuaika'] . ", " . $rivi['Leipateksti']. "<br>";       
-} 
-?>  
+include("yhteys.php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -103,36 +87,146 @@ body {
           <a class="active" href="navigointi">Navigointi</a>
         </div>
       </div>
-
-<div>
-      <h2>Otsikko</h2>
-      <h5>1.1.2000</h5>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <br>
-    <div>
-      <h2>Otsikko</h2>
-      <h5>1.1.2000</h5>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <br>
-    <h1>
-    <?php
-    $sql_lause =  "SELECT * FROM uutiset"
-    WHERE Id='3';
-echo $rivi['Otsikko']
+<h1>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='1'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Otsikko'];
 ?>
 </h1>
-    <div>
-        <h2>Otsikko</h2>
-        <h5>1.1.2000</h5>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit. </p>
-        <p> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      </div>
-  </div>
-
+<h4>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='1'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Julkaisuaika'];
+?>
+</h4>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='1'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Leipateksti'];
+?>
+<h1>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='2'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Otsikko'];
+?>
+</h1>
+<h4>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='2'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Julkaisuaika'];
+?>
+</h4>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='2'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Leipateksti'];
+?>
+<h1>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='3'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Otsikko'];
+?>
+</h1>
+<h4>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='3'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Julkaisuaika'];
+?>
+</h4>
+<?php
+$sql_lause =  "SELECT * FROM uutiset WHERE Id ='3'";
+try {
+  $kysely = $yhteys->prepare($sql_lause);
+  $kysely->execute();
+} 
+ catch (PDOException $e) {
+            die("VIRHE: " . $e->getMessage());
+       }
+$tulos = $kysely->fetchAll();
+foreach($tulos as $rivi) {  
+} 
+echo $rivi['Leipateksti'];
+?>
   <div class="footer">
-    <p id="demo">Copyright © Juhannuskukkulan padelseura 2010-2022 | All Rights Reserved</p>
+    <p>Copyright © Juhannuskukkulan padelseura 2010-2022 | All Rights Reserved</p>
     <script>
 function myFunction() {
   document.getElementById("demo").style.fontSize = "25px"; 
