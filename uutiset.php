@@ -132,7 +132,14 @@ echo $rivi['Otsikko']
   </div>
 
   <div class="footer">
-    <p>Copyright © Juhannuskukkulan padelseura 2010-2022 | All Rights Reserved</p>
+    <p id="demo">Copyright © Juhannuskukkulan padelseura 2010-2022 | All Rights Reserved</p>
+    <script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "black";
+  document.getElementById("demo").style.backgroundColor = "grey";        
+}
+</script>
   </div>
 
 </body>
